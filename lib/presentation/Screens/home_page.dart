@@ -1,3 +1,4 @@
+import 'package:car_rental/presentation/components/home_page_components.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -26,13 +27,19 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text(
+              Text(
                 'Enjoy the ride in the',
-                style: TextStyle(fontSize: 16, color: Colors.grey),
+                style: Theme.of(context)
+                    .textTheme
+                    .bodyMedium!
+                    .copyWith(color: Colors.grey, fontSize: 16),
               ),
-              const Text(
+              Text(
                 'Car you Like.',
-                style: TextStyle(fontSize: 28, fontWeight: FontWeight.w700),
+                style: Theme.of(context)
+                    .textTheme
+                    .titleLarge!
+                    .copyWith(fontSize: 36),
               ),
               const SizedBox(
                 height: 20,
@@ -42,22 +49,22 @@ class _HomePageState extends State<HomePage> {
                   width: MediaQuery.sizeOf(context).width * 0.9,
                   decoration: BoxDecoration(
                     border: Border.all(
-                        color: const Color.fromARGB(255, 205, 205, 205)),
+                        color: Theme.of(context).colorScheme.tertiary),
                     borderRadius: BorderRadius.circular(5),
                   ),
                   child: Padding(
                     padding: const EdgeInsets.only(left: 8),
                     child: DropdownButtonFormField(
-                      decoration: const InputDecoration(
+                      decoration: InputDecoration(
                         focusedBorder: UnderlineInputBorder(
                             borderSide: BorderSide(
-                                color: Color.fromARGB(255, 205, 205, 205))),
+                                color: Theme.of(context).colorScheme.tertiary)),
                         enabledBorder: UnderlineInputBorder(
                             borderSide: BorderSide(
-                                color: Color.fromARGB(255, 205, 205, 205))),
+                                color: Theme.of(context).colorScheme.tertiary)),
                         prefixIcon: Icon(
                           Icons.location_on,
-                          color: Color(0xffff6e49),
+                          color: Theme.of(context).colorScheme.secondary,
                         ),
                       ),
                       value: dropdownvalue,
@@ -78,19 +85,7 @@ class _HomePageState extends State<HomePage> {
               const SizedBox(
                 height: 20,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    "Best Offers",
-                    style: TextStyle(fontWeight: FontWeight.w700, fontSize: 22),
-                  ),
-                  Text(
-                    "View all",
-                    style: TextStyle(fontSize: 16, color: Color(0xffff6e49)),
-                  )
-                ],
-              )
+              rowdata(context, 'Best Offers', 'view all')
             ],
           ),
         ),
