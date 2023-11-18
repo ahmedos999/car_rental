@@ -85,7 +85,20 @@ class _HomePageState extends State<HomePage> {
               const SizedBox(
                 height: 20,
               ),
-              rowdata(context, 'Best Offers', 'view all')
+              rowdata(context, 'Best Offers', 'view all'),
+              const SizedBox(
+                height: 20,
+              ),
+              Container(
+                width: MediaQuery.sizeOf(context).width,
+                height: MediaQuery.sizeOf(context).height / 3,
+                decoration: BoxDecoration(
+                    color: Theme.of(context).colorScheme.tertiary,
+                    borderRadius: BorderRadius.circular(5)),
+                child: Column(
+                  children: [],
+                ),
+              )
             ],
           ),
         ),

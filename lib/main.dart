@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
               seedColor: Colors.deepPurple,
               primary: Colors.black,
               secondary: const Color(0xffff6e49),
-              tertiary: const Color.fromARGB(255, 205, 205, 205)),
+              tertiary: const Color(0xfff5f5f5)),
           useMaterial3: true,
           fontFamily: 'Poppins',
           textTheme: const TextTheme(
