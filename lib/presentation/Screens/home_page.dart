@@ -19,8 +19,8 @@ class _HomePageState extends State<HomePage> {
   ];
   // carShow(context, 'assets/imgs/car2.png', '4.5', 'Mercedes Benz',
   //     'Sedan', '\$150', '4', 'Automatic', '\$129')
-  List<car> discontedCars = [
-    car(
+  List<Car> discontedCars = [
+    Car(
         id: 1,
         img: 'assets/imgs/car2.png',
         rating: '4.5',
@@ -30,7 +30,7 @@ class _HomePageState extends State<HomePage> {
         seats: '4',
         gear: 'Automatic',
         price: '\$129'),
-    car(
+    Car(
         id: 2,
         img: 'assets/imgs/car1.png',
         rating: '3.5',
@@ -40,7 +40,7 @@ class _HomePageState extends State<HomePage> {
         seats: '2',
         gear: 'Automatic',
         price: '\$130'),
-    car(
+    Car(
         id: 3,
         img: 'assets/imgs/car3.png',
         rating: '4.1',
@@ -50,7 +50,7 @@ class _HomePageState extends State<HomePage> {
         seats: '4',
         gear: 'Automatic',
         price: '\$101'),
-    car(
+    Car(
         id: 4,
         img: 'assets/imgs/car6.png',
         rating: '4.4',

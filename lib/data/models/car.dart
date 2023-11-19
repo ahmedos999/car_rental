@@ -1,4 +1,4 @@
-class car {
+class Car {
   int id;
   String img;
   String rating;
@@ -9,7 +9,7 @@ class car {
   String gear;
   String price;
 
-  car(
+  Car(
       {required this.id,
       required this.img,
       required this.rating,

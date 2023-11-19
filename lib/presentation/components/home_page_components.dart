@@ -24,48 +24,55 @@ Widget carShow(BuildContext context, String img, String rating, String name,
     child: Container(
       width: MediaQuery.sizeOf(context).width * 0.8,
       // height: MediaQuery.sizeOf(context).height / 2.5,
-      decoration: BoxDecoration(
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey.withOpacity(0.3),
-              spreadRadius: 3,
-              blurRadius: 5,
-              offset: const Offset(0, 2), // changes position of shadow
-            ),
-          ],
-          color: Theme.of(context).colorScheme.tertiary,
-          borderRadius: BorderRadius.circular(5)),
+      decoration: BoxDecoration(boxShadow: [
+        BoxShadow(
+          color: Colors.grey.withOpacity(0.3),
+          spreadRadius: 3,
+          blurRadius: 5,
+          offset: const Offset(0, 2), // changes position of shadow
+        ),
+      ], color: Colors.white, borderRadius: BorderRadius.circular(5)),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
+            Container(
+              color: Theme.of(context).colorScheme.tertiary,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Icon(
-                      Icons.star,
-                      color: Theme.of(context).colorScheme.secondary,
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.star,
+                          color: Theme.of(context).colorScheme.secondary,
+                        ),
+                        Text(rating,
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyMedium!
+                                .copyWith(fontSize: 14))
+                      ],
                     ),
-                    Text(rating,
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodyMedium!
-                            .copyWith(fontSize: 14))
+                    Icon(
+                      Icons.favorite_border,
+                      color: Theme.of(context).colorScheme.primary,
+                    )
                   ],
                 ),
-                Icon(
-                  Icons.favorite_border,
-                  color: Theme.of(context).colorScheme.primary,
-                )
-              ],
+              ),
             ),
-            const SizedBox(
+            Container(
+              color: Theme.of(context).colorScheme.tertiary,
               height: 30,
             ),
-            Expanded(child: Center(child: Image.asset(img))),
+            Expanded(
+                child: Container(
+                    color: Theme.of(context).colorScheme.tertiary,
+                    child: Center(child: Image.asset(img)))),
             Text(
               name,
               style: Theme.of(context)
