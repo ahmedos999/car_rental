@@ -184,7 +184,6 @@ class _HomePageState extends State<HomePage> {
                             discontedCars[index].rating,
                             discontedCars[index].name,
                             discontedCars[index].brand,
-                            discontedCars[index].disconted,
                             discontedCars[index].seats,
                             discontedCars[index].gear,
                             discontedCars[index].price);

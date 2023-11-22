@@ -37,42 +37,70 @@ Widget carShow(BuildContext context, String img, String rating, String name,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              color: Theme.of(context).colorScheme.tertiary,
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Row(
-                      children: [
-                        Icon(
-                          Icons.star,
-                          color: Theme.of(context).colorScheme.secondary,
-                        ),
-                        Text(rating,
-                            style: Theme.of(context)
-                                .textTheme
-                                .bodyMedium!
-                                .copyWith(fontSize: 14))
-                      ],
+            Expanded(
+              child: Container(
+                decoration: const BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: Color.fromARGB(159, 240, 240, 240),
+                      spreadRadius: 1,
+                      blurRadius: 15,
+                      offset: Offset(5, 5),
                     ),
-                    Icon(
-                      Icons.favorite_border,
-                      color: Theme.of(context).colorScheme.primary,
-                    )
+                    BoxShadow(
+                        color: Colors.white,
+                        offset: Offset(-5, -5),
+                        blurRadius: 10,
+                        spreadRadius: 1),
+                  ],
+                  gradient: LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: [
+                      Color.fromARGB(70, 134, 134, 134),
+                      Color.fromARGB(94, 160, 160, 160),
+                      Color.fromARGB(119, 216, 216, 216),
+                      Color.fromARGB(159, 242, 242, 242),
+                    ],
+                  ),
+                ),
+                // width: MediaQuery.sizeOf(context).width,
+                // height: MediaQuery.sizeOf(context).height / 5,
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              Icon(
+                                Icons.star,
+                                color: Theme.of(context).colorScheme.secondary,
+                              ),
+                              Text(rating,
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .bodyMedium!
+                                      .copyWith(fontSize: 14))
+                            ],
+                          ),
+                          Icon(
+                            Icons.favorite_border,
+                            color: Theme.of(context).colorScheme.primary,
+                          )
+                        ],
+                      ),
+                    ),
+                    Container(
+                      height: 30,
+                    ),
+                    Expanded(child: Center(child: Image.asset(img)))
                   ],
                 ),
               ),
             ),
-            Container(
-              color: Theme.of(context).colorScheme.tertiary,
-              height: 30,
-            ),
-            Expanded(
-                child: Container(
-                    color: Theme.of(context).colorScheme.tertiary,
-                    child: Center(child: Image.asset(img)))),
             Text(
               name,
               style: Theme.of(context)
@@ -170,7 +198,7 @@ Widget carShow(BuildContext context, String img, String rating, String name,
 }
 
 Widget carShow2(BuildContext context, String img, String rating, String name,
-    String brand, String disconted, String seats, String gear, String price) {
+    String brand, String seats, String gear, String price) {
   return Padding(
     padding: const EdgeInsets.all(8.0),
     child: Container(
@@ -189,66 +217,70 @@ Widget carShow2(BuildContext context, String img, String rating, String name,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              color: Color.fromARGB(111, 255, 109, 73),
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Row(
-                      children: [
-                        Icon(
-                          Icons.star,
-                          color: Theme.of(context).colorScheme.secondary,
-                        ),
-                        Text(rating,
-                            style: Theme.of(context)
-                                .textTheme
-                                .bodyMedium!
-                                .copyWith(fontSize: 14))
-                      ],
+            Expanded(
+              child: Container(
+                decoration: const BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: Color.fromARGB(159, 255, 155, 130),
+                      spreadRadius: 1,
+                      blurRadius: 15,
+                      offset: Offset(5, 5),
                     ),
-                    Icon(
-                      Icons.favorite_border,
-                      color: Theme.of(context).colorScheme.primary,
-                    )
+                    BoxShadow(
+                        color: Colors.white,
+                        offset: Offset(-3, -3),
+                        blurRadius: 5,
+                        spreadRadius: 1),
+                  ],
+                  gradient: LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: [
+                      Color.fromARGB(71, 255, 132, 102),
+                      Color.fromARGB(94, 255, 154, 129),
+                      Color.fromARGB(119, 255, 183, 165),
+                      Color.fromARGB(159, 255, 206, 193),
+                    ],
+                  ),
+                ),
+                // width: MediaQuery.sizeOf(context).width,
+                // height: MediaQuery.sizeOf(context).height / 5,
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              Icon(
+                                Icons.star,
+                                color: Theme.of(context).colorScheme.secondary,
+                              ),
+                              Text(rating,
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .bodyMedium!
+                                      .copyWith(fontSize: 14))
+                            ],
+                          ),
+                          Icon(
+                            Icons.favorite_border,
+                            color: Theme.of(context).colorScheme.primary,
+                          )
+                        ],
+                      ),
+                    ),
+                    Container(
+                      height: 30,
+                    ),
+                    Expanded(child: Center(child: Image.asset(img)))
                   ],
                 ),
               ),
             ),
-            Container(
-              color: Color.fromARGB(255, 255, 109, 73),
-              height: 30,
-            ),
-            Expanded(
-                child: Container(
-                    decoration: const BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(
-                          color: Color.fromARGB(159, 255, 109, 73),
-                          spreadRadius: 1,
-                          blurRadius: 15,
-                          offset: Offset(5, 5),
-                        ),
-                        BoxShadow(
-                            color: Colors.white,
-                            offset: Offset(-5, -5),
-                            blurRadius: 15,
-                            spreadRadius: 1),
-                      ],
-                      gradient: LinearGradient(
-                        begin: Alignment.topLeft,
-                        end: Alignment.bottomRight,
-                        colors: [
-                          Color.fromARGB(73, 255, 109, 73),
-                          Color.fromARGB(94, 255, 109, 73),
-                          Color.fromARGB(119, 255, 109, 73),
-                          Color.fromARGB(159, 255, 109, 73),
-                        ],
-                      ),
-                    ),
-                    child: Center(child: Image.asset(img)))),
             Text(
               name,
               style: Theme.of(context)
@@ -268,20 +300,6 @@ Widget carShow2(BuildContext context, String img, String rating, String name,
                       fontSize: 16,
                       color: const Color.fromARGB(255, 138, 138, 138)),
                 ),
-                Row(
-                  children: [
-                    Text(
-                      disconted,
-                      style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                          decoration: TextDecoration.lineThrough,
-                          fontSize: 20,
-                          color: const Color.fromARGB(255, 138, 138, 138)),
-                    ),
-                    const SizedBox(
-                      width: 35,
-                    )
-                  ],
-                )
               ],
             ),
             const SizedBox(
