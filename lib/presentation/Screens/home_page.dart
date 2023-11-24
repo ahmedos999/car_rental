@@ -1,4 +1,5 @@
 import 'package:car_rental/data/models/car.dart';
+import 'package:car_rental/presentation/Screens/history.dart';
 import 'package:car_rental/presentation/components/home_page_components.dart';
 import 'package:flutter/material.dart';
 
@@ -201,6 +202,22 @@ class _HomePageState extends State<HomePage> {
           unselectedItemColor: Colors.grey,
           iconSize: 30,
           currentIndex: 0,
+          onTap: (value) {
+            switch (value) {
+              case 0:
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const HomePage()),
+                );
+                break;
+              case 1:
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const History()),
+                );
+                break;
+            }
+          },
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               icon: Icon(
