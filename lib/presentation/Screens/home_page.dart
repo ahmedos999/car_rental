@@ -170,8 +170,6 @@ class _HomePageState extends State<HomePage> {
                 const SizedBox(
                   height: 20,
                 ),
-                // carShow(context, 'assets/imgs/car2.png', '4.5', 'Mercedes Benz',
-                //     'Sedan', '\$150', '4', 'Automatic', '\$129')
                 SizedBox(
                   height: MediaQuery.sizeOf(context).height / 2.5,
                   width: MediaQuery.sizeOf(context).width,
