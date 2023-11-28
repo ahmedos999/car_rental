@@ -1,3 +1,4 @@
+import 'package:car_rental/presentation/components/history_page_components.dart';
 import 'package:flutter/material.dart';
 
 class History extends StatelessWidget {
@@ -51,88 +52,26 @@ class History extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                Container(
-                  decoration: BoxDecoration(
-                      border: Border.all(color: Colors.grey),
-                      borderRadius: BorderRadius.circular(5)),
-                  child: Padding(
-                    padding: const EdgeInsets.all(12),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Maserati Convertibale',
-                          style: Theme.of(context)
-                              .textTheme
-                              .titleLarge!
-                              .copyWith(fontSize: 20),
-                        ),
-                        const Text(
-                          'cabriotlet',
-                          style: TextStyle(fontSize: 14, color: Colors.black54),
-                        ),
-                        const SizedBox(
-                          height: 20,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Row(
-                                  children: [
-                                    Text(
-                                      'order date: ',
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .titleLarge!
-                                          .copyWith(
-                                              fontSize: 18,
-                                              color: Colors.black45),
-                                    ),
-                                    const Text(
-                                      'Oct 29, 2022',
-                                      style: TextStyle(
-                                          fontSize: 14,
-                                          color: Colors.black87,
-                                          fontWeight: FontWeight.w700),
-                                    ),
-                                  ],
-                                ),
-                                Row(
-                                  children: [
-                                    Text(
-                                      'Status: ',
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .titleLarge!
-                                          .copyWith(
-                                              fontSize: 18,
-                                              color: Colors.black45),
-                                    ),
-                                    Text(
-                                      'Active',
-                                      style: TextStyle(
-                                          fontSize: 14,
-                                          color: Colors.green[400],
-                                          fontWeight: FontWeight.w700),
-                                    ),
-                                  ],
-                                )
-                              ],
-                            ),
-                            SizedBox(
-                              width: MediaQuery.sizeOf(context).width / 3,
-                              // height: MediaQuery.sizeOf(context).width / 3,
-                              child: Image.asset('assets/imgs/car1.png'),
-                            )
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-                )
+                historycard(
+                    context,
+                    'Maserati Convertibale',
+                    'cabriotlet',
+                    'Oct 29, 2022',
+                    'Active',
+                    Colors.green,
+                    'assets/imgs/car1.png'),
+                historycard(
+                    context,
+                    'Jeep Cherokee',
+                    'cabriotlet',
+                    'Oct 18, 2022',
+                    'Canceled',
+                    const Color(0xffff6e49),
+                    'assets/imgs/car6.png'),
+                historycard(context, 'Mini Cooper', 'cabriotlet', 'Sep 7, 2022',
+                    'Ended', Colors.black, 'assets/imgs/car3.png'),
+                historycard(context, 'Mazda Cx-5', 'cabriotlet', 'Oct 29, 2022',
+                    'Active', Colors.green, 'assets/imgs/car4.png'),
               ],
             ),
           ),
