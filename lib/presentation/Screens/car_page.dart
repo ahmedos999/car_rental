@@ -8,10 +8,15 @@ class CarPage extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          leading: const Icon(
-            Icons.arrow_back_ios,
-            size: 26,
-            color: Color(0xffff6e49),
+          leading: GestureDetector(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: const Icon(
+              Icons.arrow_back_ios,
+              size: 26,
+              color: Color(0xffff6e49),
+            ),
           ),
           title: const Text(
             'Toyota C-HR',
