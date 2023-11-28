@@ -39,30 +39,21 @@ Widget carShow(BuildContext context, String img, String rating, String name,
           children: [
             Expanded(
               child: Container(
-                decoration: const BoxDecoration(
-                  boxShadow: [
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(300),
+                  boxShadow: const [
                     BoxShadow(
-                      color: Color.fromARGB(159, 240, 240, 240),
+                      color: Color.fromARGB(159, 209, 209, 209),
                       spreadRadius: 1,
                       blurRadius: 15,
                       offset: Offset(5, 5),
                     ),
                     BoxShadow(
-                        color: Colors.white,
-                        offset: Offset(-5, -5),
-                        blurRadius: 10,
-                        spreadRadius: 1),
+                        color: Color.fromARGB(159, 216, 216, 216),
+                        offset: Offset(-10, -10),
+                        blurRadius: 100,
+                        spreadRadius: 10),
                   ],
-                  gradient: LinearGradient(
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                    colors: [
-                      Color.fromARGB(70, 134, 134, 134),
-                      Color.fromARGB(94, 160, 160, 160),
-                      Color.fromARGB(119, 216, 216, 216),
-                      Color.fromARGB(159, 242, 242, 242),
-                    ],
-                  ),
                 ),
                 // width: MediaQuery.sizeOf(context).width,
                 // height: MediaQuery.sizeOf(context).height / 5,
@@ -219,30 +210,21 @@ Widget carShow2(BuildContext context, String img, String rating, String name,
           children: [
             Expanded(
               child: Container(
-                decoration: const BoxDecoration(
-                  boxShadow: [
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(300),
+                  boxShadow: const [
                     BoxShadow(
-                      color: Color.fromARGB(159, 255, 155, 130),
+                      color: Color.fromARGB(159, 254, 213, 203),
                       spreadRadius: 1,
                       blurRadius: 15,
                       offset: Offset(5, 5),
                     ),
                     BoxShadow(
-                        color: Colors.white,
-                        offset: Offset(-3, -3),
-                        blurRadius: 5,
-                        spreadRadius: 1),
+                        color: Color.fromARGB(159, 249, 212, 204),
+                        offset: Offset(-10, -10),
+                        blurRadius: 100,
+                        spreadRadius: 10),
                   ],
-                  gradient: LinearGradient(
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                    colors: [
-                      Color.fromARGB(71, 255, 132, 102),
-                      Color.fromARGB(94, 255, 154, 129),
-                      Color.fromARGB(119, 255, 183, 165),
-                      Color.fromARGB(159, 255, 206, 193),
-                    ],
-                  ),
                 ),
                 // width: MediaQuery.sizeOf(context).width,
                 // height: MediaQuery.sizeOf(context).height / 5,

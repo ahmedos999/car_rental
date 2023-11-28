@@ -1,4 +1,5 @@
 import 'package:car_rental/data/models/car.dart';
+import 'package:car_rental/presentation/Screens/car_page.dart';
 import 'package:car_rental/presentation/Screens/history.dart';
 import 'package:car_rental/presentation/components/home_page_components.dart';
 import 'package:flutter/material.dart';
@@ -177,15 +178,24 @@ class _HomePageState extends State<HomePage> {
                       scrollDirection: Axis.horizontal,
                       itemCount: discontedCars.length,
                       itemBuilder: (context, index) {
-                        return carShow2(
-                            context,
-                            discontedCars[index].img,
-                            discontedCars[index].rating,
-                            discontedCars[index].name,
-                            discontedCars[index].brand,
-                            discontedCars[index].seats,
-                            discontedCars[index].gear,
-                            discontedCars[index].price);
+                        return GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const CarPage()),
+                            );
+                          },
+                          child: carShow2(
+                              context,
+                              discontedCars[index].img,
+                              discontedCars[index].rating,
+                              discontedCars[index].name,
+                              discontedCars[index].brand,
+                              discontedCars[index].seats,
+                              discontedCars[index].gear,
+                              discontedCars[index].price),
+                        );
                       }),
                 )
               ],
