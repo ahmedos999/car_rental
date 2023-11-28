@@ -1,3 +1,5 @@
+import 'package:car_rental/presentation/components/car_page_components.dart';
+import 'package:car_rental/presentation/components/home_page_components.dart';
 import 'package:flutter/material.dart';
 
 class CarPage extends StatelessWidget {
@@ -37,6 +39,7 @@ class CarPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Icon(
                         Icons.star,
@@ -87,10 +90,87 @@ class CarPage extends StatelessWidget {
                   ],
                 ),
                 child: Image.asset('assets/imgs/car1.png'),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              rowdata(context, 'Car information', 'More'),
+              const SizedBox(
+                height: 20,
+              ),
+              SizedBox(
+                height: MediaQuery.sizeOf(context).height / 2,
+                child: GridView.count(
+                  crossAxisCount: 2,
+                  childAspectRatio: 3,
+                  crossAxisSpacing: 6.0,
+                  mainAxisSpacing: 12.0,
+                  children: [
+                    infocard(context, Icons.local_gas_station_outlined,
+                        'Tank Size', '50 Liters'),
+                    infocard(context, Icons.g_mobiledata_rounded, 'Gear Box',
+                        'Automatic'),
+                    infocard(context, Icons.people, 'Seats', '4'),
+                    infocard(context, Icons.door_back_door, 'Doors', '2'),
+                  ],
+                ),
               )
             ],
           ),
         )),
+        bottomNavigationBar: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Container(
+            height: MediaQuery.sizeOf(context).height * 0.1,
+            child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        '\$175',
+                        style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                            decoration: TextDecoration.lineThrough,
+                            fontSize: 24,
+                            color: const Color.fromARGB(255, 138, 138, 138)),
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            '\$150/',
+                            style: Theme.of(context)
+                                .textTheme
+                                .titleLarge!
+                                .copyWith(fontSize: 28, color: Colors.black),
+                          ),
+                          const Text(
+                            'day',
+                            style: TextStyle(color: Colors.black45),
+                          )
+                        ],
+                      ),
+                    ],
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                        color: Color(0xffff6e49),
+                        borderRadius: BorderRadius.circular(5)),
+                    width: MediaQuery.sizeOf(context).width / 1.5,
+                    height: MediaQuery.sizeOf(context).height * 0.06,
+                    child: const Center(
+                        child: Text(
+                      'Rent now',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 20),
+                    )),
+                  )
+                ]),
+          ),
+        ),
       ),
     );
   }
