@@ -1,3 +1,4 @@
+import 'package:car_rental/presentation/Screens/extra_services_page.dart';
 import 'package:car_rental/presentation/components/car_page_components.dart';
 import 'package:car_rental/presentation/components/home_page_components.dart';
 import 'package:flutter/material.dart';
@@ -9,23 +10,7 @@ class CarPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          leading: GestureDetector(
-            onTap: () {
-              Navigator.pop(context);
-            },
-            child: const Icon(
-              Icons.arrow_back_ios,
-              size: 26,
-              color: Color(0xffff6e49),
-            ),
-          ),
-          title: const Text(
-            'Toyota C-HR',
-            style: TextStyle(fontSize: 28, fontWeight: FontWeight.w500),
-          ),
-          centerTitle: true,
-        ),
+        appBar: appBar(context, 'Toyota C-HR'),
         body: SingleChildScrollView(
             child: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -120,7 +105,7 @@ class CarPage extends StatelessWidget {
         )),
         bottomNavigationBar: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Container(
+          child: SizedBox(
             height: MediaQuery.sizeOf(context).height * 0.1,
             child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -153,20 +138,37 @@ class CarPage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Container(
-                    decoration: BoxDecoration(
-                        color: Color(0xffff6e49),
-                        borderRadius: BorderRadius.circular(5)),
-                    width: MediaQuery.sizeOf(context).width / 1.5,
-                    height: MediaQuery.sizeOf(context).height * 0.06,
-                    child: const Center(
-                        child: Text(
-                      'Rent now',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 20),
-                    )),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ExtraServices()));
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                          color: const Color(0xffff6e49),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.3),
+                              spreadRadius: 1,
+                              blurRadius: 3,
+                              offset: const Offset(
+                                  0, 0), // changes position of shadow
+                            ),
+                          ],
+                          borderRadius: BorderRadius.circular(5)),
+                      width: MediaQuery.sizeOf(context).width / 1.5,
+                      height: MediaQuery.sizeOf(context).height * 0.06,
+                      child: const Center(
+                          child: Text(
+                        'Rent now',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w600,
+                            fontSize: 20),
+                      )),
+                    ),
                   )
                 ]),
           ),

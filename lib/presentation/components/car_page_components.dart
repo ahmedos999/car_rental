@@ -60,3 +60,23 @@ Widget infocard(
     ),
   );
 }
+
+AppBar appBar(BuildContext context, String title) {
+  return AppBar(
+    leading: GestureDetector(
+      onTap: () {
+        Navigator.pop(context);
+      },
+      child: const Icon(
+        Icons.arrow_back_ios,
+        size: 26,
+        color: Color(0xffff6e49),
+      ),
+    ),
+    title: Text(
+      title,
+      style: const TextStyle(fontSize: 28, fontWeight: FontWeight.w500),
+    ),
+    centerTitle: true,
+  );
+}
