@@ -1,3 +1,4 @@
+import 'package:car_rental/presentation/Screens/order_page.dart';
 import 'package:car_rental/presentation/components/car_page_components.dart';
 import 'package:car_rental/presentation/components/extra_services_componts.dart';
 import 'package:flutter/material.dart';
@@ -57,36 +58,42 @@ class ExtraServices extends StatelessWidget {
       ),
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: SizedBox(
-          height: MediaQuery.sizeOf(context).height * 0.06,
-          child: Container(
-            decoration: BoxDecoration(
-                color: const Color(0xffff6e49),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.3),
-                    spreadRadius: 1,
-                    blurRadius: 3,
-                    offset: const Offset(0, 0), // changes position of shadow
+        child: GestureDetector(
+          onTap: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const OrderPage()));
+          },
+          child: SizedBox(
+            height: MediaQuery.sizeOf(context).height * 0.06,
+            child: Container(
+              decoration: BoxDecoration(
+                  color: const Color(0xffff6e49),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.3),
+                      spreadRadius: 1,
+                      blurRadius: 3,
+                      offset: const Offset(0, 0), // changes position of shadow
+                    ),
+                  ],
+                  borderRadius: BorderRadius.circular(5)),
+              width: MediaQuery.sizeOf(context).width / 1.5,
+              child: const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Continue',
+                    style: TextStyle(
+                        fontWeight: FontWeight.w700,
+                        color: Colors.white,
+                        fontSize: 20),
                   ),
+                  Icon(
+                    Icons.arrow_forward_outlined,
+                    color: Colors.white,
+                  )
                 ],
-                borderRadius: BorderRadius.circular(5)),
-            width: MediaQuery.sizeOf(context).width / 1.5,
-            child: const Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  'Continue',
-                  style: TextStyle(
-                      fontWeight: FontWeight.w700,
-                      color: Colors.white,
-                      fontSize: 20),
-                ),
-                Icon(
-                  Icons.arrow_forward_outlined,
-                  color: Colors.white,
-                )
-              ],
+              ),
             ),
           ),
         ),

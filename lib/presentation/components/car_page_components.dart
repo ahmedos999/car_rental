@@ -15,7 +15,6 @@ Widget infocard(
         ),
       ],
       borderRadius: BorderRadius.circular(10),
-      // border: Border.all(color: Colors.black38),
     ),
     child: Padding(
       padding: const EdgeInsets.all(4.0),
