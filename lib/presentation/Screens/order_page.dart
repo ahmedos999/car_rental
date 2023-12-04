@@ -121,7 +121,112 @@ class OrderPage extends StatelessWidget {
                   ],
                 )
               ],
-            )
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Text(
+              'Rent Info',
+              style: Theme.of(context)
+                  .textTheme
+                  .titleLarge!
+                  .copyWith(fontSize: 24),
+            ),
+            const Row(
+              children: [
+                Icon(
+                  Icons.date_range,
+                  color: Colors.black45,
+                ),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 8),
+                  child: Text(
+                    'Rental Duration:',
+                    style: TextStyle(color: Colors.black45, fontSize: 16),
+                  ),
+                ),
+                Text(
+                  '8 Days',
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                )
+              ],
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            const Row(
+              children: [
+                Icon(
+                  Icons.location_on,
+                  color: Colors.green,
+                ),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 8),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Pickup Location',
+                        style: TextStyle(color: Colors.black45, fontSize: 16),
+                      ),
+                      Text(
+                        'Los Angeles,2201 S Beverly Glen Blvd',
+                        style: TextStyle(color: Colors.black87, fontSize: 14),
+                      ),
+                      Text(
+                        'Oct 06,2022 - 09:00AM',
+                        style: TextStyle(color: Colors.black54, fontSize: 14),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 10),
+              child: Column(
+                children: List.generate(
+                    10,
+                    (index) => Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 1.5),
+                          child: Container(
+                            color: index % 2 == 0
+                                ? Colors.transparent
+                                : Colors.grey,
+                            height: 3,
+                            width: 3,
+                          ),
+                        )),
+              ),
+            ),
+            const Row(
+              children: [
+                Icon(
+                  Icons.location_on,
+                  color: Colors.red,
+                ),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 8),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Return Location',
+                        style: TextStyle(color: Colors.black45, fontSize: 16),
+                      ),
+                      Text(
+                        'Los Angeles,2201 S Beverly Glen Blvd',
+                        style: TextStyle(color: Colors.black87, fontSize: 14),
+                      ),
+                      Text(
+                        'Oct 14,2022 - 09:00AM',
+                        style: TextStyle(color: Colors.black54, fontSize: 14),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ]),
         ),
       ),
