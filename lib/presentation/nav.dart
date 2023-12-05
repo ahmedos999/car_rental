@@ -1,3 +1,4 @@
+import 'package:car_rental/presentation/Screens/account.dart';
 import 'package:car_rental/presentation/Screens/history.dart';
 import 'package:car_rental/presentation/Screens/home_page.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +11,11 @@ class Nav extends StatefulWidget {
 }
 
 class _NavState extends State<Nav> {
-  final List<Widget> _pages = <Widget>[const HomePage(), const History()];
+  final List<Widget> _pages = <Widget>[
+    const HomePage(),
+    const History(),
+    const Account()
+  ];
   int _selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
@@ -18,7 +23,7 @@ class _NavState extends State<Nav> {
       body: _pages.elementAt(_selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
         onTap: (index) {
-          if (index == 0 || index == 1) {
+          if (index == 0 || index == 1 || index == 2) {
             setState(() {
               _selectedIndex = index;
             });
