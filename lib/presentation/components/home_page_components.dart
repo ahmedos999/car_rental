@@ -43,7 +43,7 @@ Widget carShow(BuildContext context, String img, String rating, String name,
                   borderRadius: BorderRadius.circular(300),
                   boxShadow: const [
                     BoxShadow(
-                      color: Color.fromARGB(159, 209, 209, 209),
+                      color: Color.fromARGB(159, 228, 228, 228),
                       spreadRadius: 1,
                       blurRadius: 15,
                       offset: Offset(5, 5),
@@ -214,7 +214,7 @@ Widget carShow2(BuildContext context, String img, String rating, String name,
                   borderRadius: BorderRadius.circular(300),
                   boxShadow: const [
                     BoxShadow(
-                      color: Color.fromARGB(159, 254, 213, 203),
+                      color: Color.fromARGB(159, 253, 221, 213),
                       spreadRadius: 1,
                       blurRadius: 15,
                       offset: Offset(5, 5),

@@ -29,8 +29,12 @@ class CarPage extends StatelessWidget {
                       Icon(
                         Icons.star,
                         color: Color(0xffff6e49),
+                        size: 20,
                       ),
-                      Text('4.5')
+                      Text(
+                        '4.5',
+                        style: TextStyle(fontSize: 14),
+                      )
                     ],
                   ),
                   Icon(Icons.favorite_border_sharp)
@@ -51,7 +55,7 @@ class CarPage extends StatelessWidget {
                 style: Theme.of(context)
                     .textTheme
                     .bodyMedium!
-                    .copyWith(fontSize: 18, color: Colors.black54),
+                    .copyWith(fontSize: 16, color: Colors.black54),
               ),
               const SizedBox(
                 height: 20,
@@ -62,13 +66,13 @@ class CarPage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(300),
                   boxShadow: const [
                     BoxShadow(
-                      color: Color.fromARGB(159, 255, 190, 173),
+                      color: Color.fromARGB(159, 255, 203, 190),
                       spreadRadius: 1,
                       blurRadius: 15,
                       offset: Offset(5, 5),
                     ),
                     BoxShadow(
-                        color: Color.fromARGB(159, 236, 193, 183),
+                        color: Color.fromARGB(159, 254, 213, 204),
                         offset: Offset(-10, -10),
                         blurRadius: 40,
                         spreadRadius: 10),

@@ -71,11 +71,15 @@ class OrderPage extends StatelessWidget {
                     Icon(
                       Icons.star,
                       color: Color(0xffff6e49),
+                      size: 20,
                     ),
                     SizedBox(
                       width: 5,
                     ),
-                    Text('4.5')
+                    Text(
+                      '4.5',
+                      style: TextStyle(fontSize: 14),
+                    )
                   ],
                 ),
               ],

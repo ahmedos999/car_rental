@@ -23,7 +23,7 @@ Widget infocard(
         children: [
           Icon(
             icon,
-            size: 40,
+            size: 36,
             color: Theme.of(context).colorScheme.secondary,
           ),
           Padding(
