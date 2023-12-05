@@ -1,4 +1,4 @@
-import 'package:car_rental/presentation/Screens/home_page.dart';
+import 'package:car_rental/presentation/nav.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
               titleLarge: TextStyle(fontFamily: 'Teko', fontSize: 22),
               bodyMedium: TextStyle(fontFamily: 'Poppins', fontSize: 18),
               displaySmall: TextStyle(fontFamily: 'Poppins', fontSize: 18))),
-      home: const HomePage(),
+      home: const Nav(),
     );
   }
 }

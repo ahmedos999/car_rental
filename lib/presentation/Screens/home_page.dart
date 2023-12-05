@@ -1,6 +1,5 @@
 import 'package:car_rental/data/models/car.dart';
 import 'package:car_rental/presentation/Screens/car_page.dart';
-import 'package:car_rental/presentation/Screens/history.dart';
 import 'package:car_rental/presentation/components/home_page_components.dart';
 import 'package:flutter/material.dart';
 
@@ -201,63 +200,6 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
-        ),
-        bottomNavigationBar: BottomNavigationBar(
-          showUnselectedLabels: true,
-          selectedLabelStyle:
-              const TextStyle(fontFamily: 'Poppins', fontSize: 12),
-          selectedItemColor: const Color(0xffff6e49),
-          unselectedItemColor: Colors.grey,
-          iconSize: 30,
-          currentIndex: 0,
-          onTap: (value) {
-            switch (value) {
-              case 0:
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const HomePage()),
-                );
-                break;
-              case 1:
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const History()),
-                );
-                break;
-            }
-          },
-          items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.home_rounded,
-              ),
-              label: 'Home',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.history,
-              ),
-              label: 'History',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.car_rental,
-              ),
-              label: 'Car',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.favorite_border,
-              ),
-              label: 'Favorite',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.person_2_outlined,
-              ),
-              label: 'Account',
-            ),
-          ],
         ),
       ),
     );
