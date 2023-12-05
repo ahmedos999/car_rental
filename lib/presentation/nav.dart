@@ -1,4 +1,5 @@
 import 'package:car_rental/presentation/Screens/account.dart';
+import 'package:car_rental/presentation/Screens/favorite.dart';
 import 'package:car_rental/presentation/Screens/history.dart';
 import 'package:car_rental/presentation/Screens/home_page.dart';
 import 'package:flutter/material.dart';
@@ -14,6 +15,7 @@ class _NavState extends State<Nav> {
   final List<Widget> _pages = <Widget>[
     const HomePage(),
     const History(),
+    const Favorite(),
     const Account()
   ];
   int _selectedIndex = 0;
@@ -23,11 +25,9 @@ class _NavState extends State<Nav> {
       body: _pages.elementAt(_selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
         onTap: (index) {
-          if (index == 0 || index == 1 || index == 2) {
-            setState(() {
-              _selectedIndex = index;
-            });
-          }
+          setState(() {
+            _selectedIndex = index;
+          });
         },
         showUnselectedLabels: true,
         selectedLabelStyle:
@@ -48,12 +48,6 @@ class _NavState extends State<Nav> {
               Icons.history,
             ),
             label: 'History',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.car_rental,
-            ),
-            label: 'Car',
           ),
           BottomNavigationBarItem(
             icon: Icon(
