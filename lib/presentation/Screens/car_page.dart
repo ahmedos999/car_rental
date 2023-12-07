@@ -1,4 +1,4 @@
-import 'package:car_rental/presentation/Screens/extra_services_page.dart';
+import 'package:car_rental/presentation/Screens/rent_page.dart';
 import 'package:car_rental/presentation/components/car_page_components.dart';
 import 'package:car_rental/presentation/components/home_page_components.dart';
 import 'package:flutter/material.dart';
@@ -144,10 +144,8 @@ class CarPage extends StatelessWidget {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const ExtraServices()));
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => RentPage()));
                     },
                     child: Container(
                       decoration: BoxDecoration(

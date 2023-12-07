@@ -23,7 +23,7 @@ class _HomePageState extends State<HomePage> {
   List<Car> discontedCars = [
     Car(
         id: 1,
-        img: 'assets/imgs/car2.png',
+        img: 'assets/imgs/car1.png',
         rating: '4.5',
         name: 'Mercedes Benz',
         brand: 'Sedan',
@@ -33,7 +33,7 @@ class _HomePageState extends State<HomePage> {
         price: '\$129'),
     Car(
         id: 2,
-        img: 'assets/imgs/car1.png',
+        img: 'assets/imgs/car2.png',
         rating: '3.5',
         name: 'Challanger',
         brand: 'Dodge',
